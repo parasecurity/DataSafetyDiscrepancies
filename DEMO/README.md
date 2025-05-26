@@ -7,7 +7,7 @@ labels and the Applications' run-time behaviour.
 
 ### Prerequisites
 
-* Android 13 (API 33) or higher
+* Rooted Android 13 (API 33) or higher
 * python3 or higher
 * Frida 16.2.1 (server & client)
 * Burp Suite Community Edition v2025.4.4
