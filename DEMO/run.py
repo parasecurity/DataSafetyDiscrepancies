@@ -30,7 +30,7 @@ serialnum = "16091JEC203869"
 scraper = PlayStoreScraper()
 
 os.system("adb shell 'su -c ./data/local/tmp/frida-server &' &")
-os.system("sh add_certificate.sh")
+os.system("sh ./burp_certificate_inject/add_certificate.sh")
 
 def func(line):
     apk = line.strip()
