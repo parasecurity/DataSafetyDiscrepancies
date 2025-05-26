@@ -1,0 +1,115 @@
+android.accounts.AccountManager.addAccount | Personal info
+android.accounts.AccountManager.getAccounts | Personal info
+android.accounts.AccountManager.getAccountsByType | Personal info
+android.accounts.AccountManager.getAccountsByTypeAndFeatures | Personal info
+android.accounts.AccountManager.getAccountsByTypeForPackage | Personal info
+android.accounts.AccountManager.getAuthToken | Personal info
+android.accounts.AccountManager.getPassword | Personal info
+android.accounts.AccountManager.getPreviousName | Personal info
+android.accounts.AccountManager.getUserData | Personal info
+android.accounts.AccountManager.setPassword | Personal info
+android.accounts.AccountManager.setUserData | Personal info
+android.app.ActivityManager.getRecentTasks | App activity
+android.app.ActivityManager.getRunningAppProcesses | App activity
+android.app.ActivityManager.getRunningTasks | App activity
+android.app.AppOpsManager.startWatchingMode | App info and performance, Diagnostics
+android.app.AppOpsManager.startWatchingStarted | App info and performance, Diagnostics
+android.app.usage.UsageStatsManager.getAppStandbyBucket | App info and performance
+android.app.WallpaperManager.getDrawable | Photos or videos, Photos, Files and docs
+android.bluetooth.BluetoothA2dp.getConnectedDevices | Device or other IDs
+android.bluetooth.BluetoothA2dp.getDevicesMatchingConnectionStates | Device or other IDs
+android.bluetooth.BluetoothAdapter.getAddress | Device or other IDs
+android.bluetooth.BluetoothAdapter.getBondedDevices | Device or other IDs
+android.bluetooth.BluetoothAdapter.getName | Device or other IDs
+android.bluetooth.BluetoothDevice.getName | Device or other IDs
+android.bluetooth.BluetoothDevice.getType | Device or other IDs
+android.bluetooth.BluetoothDevice.getUuids | Device or other IDs
+android.bluetooth.BluetoothHeadset.getConnectedDevices | Device or other IDs
+android.bluetooth.BluetoothHearingAid.getDevicesMatchingConnectionStates | Device or other IDs
+android.bluetooth.BluetoothManager.getConnectedDevices | Device or other IDs
+android.bluetooth.BluetoothManager.getDevicesMatchingConnectionStates | Device or other IDs
+android.content.ContentProvider.openAssetFile | Files and docs
+android.content.ContentProvider.openTypedAssetFile | Files and docs
+android.content.ContentResolver.query | Device or other IDs
+android.location.LocationManager.addGpsStatusListener | Location, Precise location
+android.location.LocationManager.addNmeaListener | Location, Precise location
+android.location.LocationManager.getCurrentLocation | Location, Precise location, Approximate location
+android.location.LocationManager.getLastKnownLocation | Location, Precise location, Approximate location
+android.location.LocationManager.registerGnssStatusCallback | Location, Precise location
+android.location.LocationManager.requestLocationUpdates | Location, Precise location, Approximate location
+android.location.LocationManager.requestSingleUpdate | Location, Precise location, Approximate location
+android.media.RingtoneManager.getRingtone | App info and performance, Diagnostics
+android.net.wifi.WifiInfo.getBSSID | Device or other IDs
+android.net.wifi.WifiInfo.getSSID | Device or other IDs
+android.os.BatteryManager.getLongProperty | App info and performance, Diagnostics
+android.os.Build.getSerial | Device or other IDs
+android.os.Debug.getMemoryInfo | App info and performance, Diagnostics
+android.os.Debug.getNativeHeapAllocatedSize | App info and performance, Diagnostics
+android.os.Debug.getNativeHeapFreeSize | App info and performance, Diagnostics
+android.os.Debug.getNativeHeapSize | App info and performance, Diagnostics
+android.os.Debug.getRuntimeStat | App info and performance, Diagnostics
+android.os.health.HealthStats.getMeasurement | App info and performance, Diagnostics
+android.os.health.HealthStats.getStats | App info and performance, Diagnostics
+android.os.PowerManager.getCurrentThermalStatus | App info and performance, Diagnostics
+android.os.StrictMode.getThreadPolicy | App info and performance
+android.os.StrictMode.getVmPolicy | App info and performance
+android.telecom.TelecomManager.getCallCapablePhoneAccounts | Personal info
+android.telecom.TelecomManager.getDefaultOutgoingPhoneAccount | Contacts
+android.telecom.TelecomManager.isVoiceMailNumber | Personal info, Phone number
+android.telephony.PhoneNumberUtils.isVoiceMailNumber | Personal info, Phone number
+android.telephony.PhoneStateListener.onCellInfoChanged | Location, Precise location
+android.telephony.PhoneStateListener.onCellLocationChanged | Location, Precise location
+android.telephony.SubscriptionInfo.getIccId | Device or other IDs
+android.telephony.SubscriptionManager.getActiveSubscriptionInfo | Personal info
+android.telephony.SubscriptionManager.getActiveSubscriptionInfoForSimSlotIndex | Personal info
+android.telephony.SubscriptionManager.getActiveSubscriptionInfoList | Personal info
+android.telephony.TelephonyManager.getAllCellInfo | Location, Precise location
+android.telephony.TelephonyManager.getCardIdForDefaultEuicc | Device or other IDs
+android.telephony.TelephonyManager.getCellLocation | Location, Precise location
+android.telephony.TelephonyManager.getDataNetworkType | Device or other IDs
+android.telephony.TelephonyManager.getDeviceId | Device or other IDs
+android.telephony.TelephonyManager.getDeviceSoftwareVersion | Device or other IDs
+android.telephony.TelephonyManager.getGroupIdLevel1 | Device or other IDs
+android.telephony.TelephonyManager.getImei | Device or other IDs
+android.telephony.TelephonyManager.getLine1Number | Personal info, Phone number
+android.telephony.TelephonyManager.getMeid | Device or other IDs
+android.telephony.TelephonyManager.getNeighboringCellInfo | Location, Approximate location
+android.telephony.TelephonyManager.getNetworkCountryIso | Personal info
+android.telephony.TelephonyManager.getNetworkOperator | Device or other IDs
+android.telephony.TelephonyManager.getNetworkOperatorName | Personal info
+android.telephony.TelephonyManager.getPhoneCount | Device or other IDs
+android.telephony.TelephonyManager.getServiceState | Location, Approximate location
+android.telephony.TelephonyManager.getSimSerialNumber | Device or other IDs
+android.telephony.TelephonyManager.getSimSpecificCarrierId | Device or other IDs
+android.telephony.TelephonyManager.getSubscriberId | Device or other IDs
+android.telephony.TelephonyManager.getVisualVoicemailPackageName | App activity
+android.telephony.TelephonyManager.getVoiceMailNumber | Personal info, Phone number
+android.telephony.TelephonyManager.getVoiceNetworkType | Device or other IDs
+android.telephony.TelephonyManager.requestCellInfoUpdate | Location, Precise location
+java.io.File.getFreeSpace | App info and performance, Other app performance data
+java.io.File.getTotalSpace | App info and performance, Other app performance data
+java.io.File.getUsableSpace | App info and performance, Other app performance data
+java.net.NetworkInterface.getHardwareAddress | Device or other IDs
+AdvertisingID | Device or other IDs
+Android_Device_ID | Device or other IDs
+DeviceID | Device or other IDs
+Google_Services_Framework_ID | Device or other IDs
+Email | Personal info, Email address 
+Name | Personal info, Name
+Surname | Personal info, Name
+Birthday | Personal info, Other info
+Gender | Personal info, Other info
+Address | Personal info, Other info, Location, Approximate location
+Bluetooth Address | Device or other IDs
+Android Serial Number | Device or other IDs
+SSID | Device or other IDs
+BSSID | Device or other IDs
+MACaddr | Device or other IDs
+IMEI | Device or other IDs
+EID | Device or other IDs
+DeviceName | Device or other IDs
+BuildNumber | Device or other IDs
+ContactName | Contacts
+ContactNumber | Contacts
+Latitude | Location, Approximate location, Precise location
+Longitude | Location, Approximate location, Precise location

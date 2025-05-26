@@ -1,0 +1,15 @@
+20230325_16:37:07 -  App Detail error for air.cbn.superbook.bible.app.android on detail price_inapp: 'NoneType' object is not subscriptable 
+20230325_16:37:07 -  App Detail error for air.cbn.superbook.bible.app.android on detail video_link: 'NoneType' object is not subscriptable 
+20230325_16:37:07 -  App Detail error for air.cbn.superbook.bible.app.android on detail pegi_detail: 'NoneType' object is not subscriptable 
+20230325_16:38:10 -  App Detail error for air.cbn.superbook.bible.app.android on detail price_inapp: 'NoneType' object is not subscriptable 
+20230325_16:38:10 -  App Detail error for air.cbn.superbook.bible.app.android on detail video_link: 'NoneType' object is not subscriptable 
+20230325_16:38:10 -  App Detail error for air.cbn.superbook.bible.app.android on detail pegi_detail: 'NoneType' object is not subscriptable 
+20230325_16:40:11 -  App Detail error for air.cbn.superbook.bible.app.android on detail price_inapp: 'NoneType' object is not subscriptable 
+20230325_16:40:11 -  App Detail error for air.cbn.superbook.bible.app.android on detail video_link: 'NoneType' object is not subscriptable 
+20230325_16:40:11 -  App Detail error for air.cbn.superbook.bible.app.android on detail pegi_detail: 'NoneType' object is not subscriptable 
+20230325_16:40:12 -  App Detail error for air.cbn.superbook.bible.app.android on detail price_inapp: 'NoneType' object is not subscriptable 
+20230325_16:40:12 -  App Detail error for air.cbn.superbook.bible.app.android on detail video_link: 'NoneType' object is not subscriptable 
+20230325_16:40:12 -  App Detail error for air.cbn.superbook.bible.app.android on detail pegi_detail: 'NoneType' object is not subscriptable 
+20230325_16:43:13 -  App Detail error for air.cbn.superbook.bible.app.android on detail price_inapp: 'NoneType' object is not subscriptable 
+20230325_16:43:13 -  App Detail error for air.cbn.superbook.bible.app.android on detail video_link: 'NoneType' object is not subscriptable 
+20230325_16:43:13 -  App Detail error for air.cbn.superbook.bible.app.android on detail pegi_detail: 'NoneType' object is not subscriptable 
