@@ -33,7 +33,23 @@ labels and the Applications' run-time behaviour.
   adb push frida-server data/tmp/local
   chmod +x data/tmp/local/frida-server
   ```
+* *Proxy*:
+  1. Go to "Settings"
+  2. Go to "Network & Internet"
+  3. Press the "settings button image" in your Wi-Fi connection 
+  4. Go to "Proxy"
+  5. Select "Manual"
+  6. Type your computer's IP as "Proxy hostname" and as the port the "8080"
 
+* *Burp*:
+  1. Go to "Proxy"
+  2. Go to "Proxy Settings"
+  3. Edit the listener to listen to your Android Device or "All interfaces"
+  4. Press "Import/Export CA certificate"
+  5. Press "Certificate in DER format" in the Export section
+  6. Press "Next"
+  7. Select the file "./burp_certificate_inject/burp.der" to save it
+  
 <!-- USAGE EXAMPLES -->
 ## Usage
 
