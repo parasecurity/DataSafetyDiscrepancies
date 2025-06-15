@@ -1,0 +1,64 @@
+{
+    "com.andymstone.metronome": {
+        "attempts": [
+            {
+                "start_timestamp": "2025-06-15 14:40:43",
+                "end_timestamp": "2025-06-15 14:42:33",
+                "status": false,
+                "message": "Control C pressed."
+            }
+        ],
+        "status": false
+    },
+    "com.ovelin.guitartuna": {
+        "attempts": [
+            {
+                "start_timestamp": "2025-06-15 14:43:19",
+                "end_timestamp": "2025-06-15 14:44:03",
+                "status": true
+            }
+        ],
+        "status": true
+    },
+    "com.yazio.android": {
+        "attempts": [
+            {
+                "start_timestamp": "2025-06-15 14:45:45",
+                "end_timestamp": "2025-06-15 14:46:13",
+                "status": true
+            }
+        ],
+        "status": true
+    },
+    "gen.tech.impulse.android": {
+        "attempts": [
+            {
+                "start_timestamp": "2025-06-15 14:47:30",
+                "end_timestamp": "2025-06-15 14:48:18",
+                "status": true
+            }
+        ],
+        "status": true
+    },
+    "com.universetoday.moon.free": {
+        "attempts": [
+            {
+                "start_timestamp": "2025-06-15 14:49:26",
+                "end_timestamp": "2025-06-15 14:50:51",
+                "status": false,
+                "message": "Control C pressed."
+            }
+        ],
+        "status": false
+    },
+    "dev.cwolf.birthdaycalendar": {
+        "attempts": [
+            {
+                "start_timestamp": "2025-06-15 14:51:48",
+                "end_timestamp": "2025-06-15 14:52:28",
+                "status": true
+            }
+        ],
+        "status": true
+    }
+}

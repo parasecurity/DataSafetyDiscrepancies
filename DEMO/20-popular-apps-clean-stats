@@ -1,0 +1,21 @@
+#package_name; downloads; category; rating; 'collected' discrepancies; 'shared' discrepancies; 'collected' discrepancies from third-parties (%)
+com.booking; 730666830; TRAVEL_AND_LOCAL; 4.79; {'Precise location', 'Location', 'Approximate location'}; {'Precise location', 'Location', 'Approximate location'}; 0%
+com.canva.editor; 547102980; ART_AND_DESIGN; 4.84; {}; {'Device or other IDs'}; 0%
+com.duolingo; 726346867; EDUCATION; 4.65; {}; {}; 0%
+com.netflix.mediaclient; 2999031749; ENTERTAINMENT; 3.81; {'Other app performance data'}; {'Name', 'Personal info'}; 25%
+com.nextcloud.client; 2473990; PRODUCTIVITY; 4.7; {'App info and performance', 'Device or other IDs', 'Personal info'}; {'Device or other IDs'}; 71.43%
+com.owncloud.android; 481179; PRODUCTIVITY; 4.33; {}; {}; 0%
+com.pinterest; 1254061231; LIFESTYLE; 4.59; {}; {}; 0%
+com.simplemobiletools.calendar; 16829623; PRODUCTIVITY; 4.69; {'App activity', 'Personal info'}; {}; 83.33% 
+com.simplemobiletools.filemanager; 7491608; TOOLS; 4.21; {'App activity', 'Personal info'}; {}; 80%
+com.simplemobiletools.gallery; 28667117; PHOTOGRAPHY; 4.64; {'App activity', 'Personal info'}; {}; 85.71%
+com.spotify.music; 2465031206; MUSIC_AND_AUDIO; 4.33; {}; {'Name'}; 0%
+com.syc.librototal.El_Libro_Total; 5148553; BOOKS_AND_REFERENCE; 4.92; {'Other app performance data', 'Diagnostics', 'App info and performance'}; {'Device or other IDs'}; 50%
+com.termux; 34859096; TOOLS; 4.51; {}; {'Device or other IDs', 'Personal info', 'Name'}; 0%
+net.osmand; 13176812; TRAVEL_AND_LOCAL; 4.48; {}; {}; 0%
+org.jitsi.meet; 31175937; COMMUNICATION; 4.24; {'Device or other IDs'}; {}; 100%
+org.odk.collect.android; 4259611; PRODUCTIVITY; 4.75; {'Other app performance data'}; {'Name', 'Personal info', 'Device or other IDs'}; 100%
+org.telegram.messenger; 2373083776; COMMUNICATION; 4.33; {'App info and performance'}; {'Personal info', 'Name', 'Device or other IDs'}; 100%
+org.thoughtcrime.securesms; 162465838; COMMUNICATION; 4.78; {'App info and performance'}; {'Device or other IDs'}; 0%
+org.videolan.vlc; 424837696; VIDEO_PLAYERS; 4.07; {}; {}; 0%
+org.wikipedia; 66121807; BOOKS_AND_REFERENCE; 4.6; {'App info and performance', 'Personal info'}; {'Device or other IDs'}; 50%

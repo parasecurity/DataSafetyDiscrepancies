@@ -1,4 +1,5 @@
 import json
+import sys
 
 lst = [
 "com.benjaminsproule.swagger",
@@ -19851,8 +19852,9 @@ lst = [
 ]
 
 lala=[]
+apk = sys.argv[1]
 
-with open("../frida-results-extra_DEC_NEW.json") as f:
+with open(f"./frida-json-files/{apk}-frida.json") as f:
 	data = json.load(f)
 	for i in data:
 		results = i['results']
@@ -19864,7 +19866,7 @@ with open("../frida-results-extra_DEC_NEW.json") as f:
 					if lib in line:
 						tmpLib = lib
 
-			lala.append(app_name+"|"+result['function']+";"+result['retval']+";"+tmpLib)
+			lala.append(result['function']+";"+tmpLib)
 
-for i in lala:
+for i in set(lala):
 	print(i)

@@ -7,6 +7,7 @@ import multiprocessing
 import argparse
 import time
 import json
+import subprocess
 
 parser = argparse.ArgumentParser(
                     prog='Play Store Crawler',
@@ -22,6 +23,9 @@ args = parser.parse_args()
 lst_name = args.list.replace("'","")
 country = args.country.replace("'","")
 
+#saved_apps_dir = "<your_folder>/"
+saved_apps_dir = "/home/arkalos/Documents/ANDROID/Android/GooglePlay_downloader/lala"
+
 #############################
 serialnum = "16091JEC203869"
 #############################
@@ -29,10 +33,10 @@ serialnum = "16091JEC203869"
 
 scraper = PlayStoreScraper()
 
-os.system("adb shell 'su -c ./data/local/tmp/frida-server &' &")
-os.system("sh ./burp_certificate_inject/add_certificate.sh")
+# os.system("adb shell 'su -c ./data/local/tmp/frida-server &' &")
+os.system("sh add_certificate.sh")
 
-def func(line):
+def download(line):
     apk = line.strip()
 
     try:
@@ -69,24 +73,28 @@ def func(line):
         print(f"ERROR: Not found app '{apk}'");
 
 
-    os.system(f"adb shell am start -a android.intent.action.VIEW -d 'market://details?id={apk}'")
-    time.sleep(2)
-    os.system("adb shell input tap 540 920")
+    # os.system(f"adb shell am start -a android.intent.action.VIEW -d 'market://details?id={apk}'")
+    # time.sleep(2)
+    # os.system("adb shell input tap 540 920")
 
-    c = 0
-    now = time.time()
-    while(c<1 and time.time()-now<15):
-    	c = int(os.popen(f"adb shell pm list packages | grep {apk} | wc -l").read())
+    ######Download the app#########
+    try:
+        error=os.popen(f"java -Draccoon.homedir={saved_apps_dir} -Draccoon.home={saved_apps_dir}/apps/ -jar raccoon4.jar --gpa-download {apk}").read().replace("\n","")
+        if error=="!fail.Item not found.!":
+            print(f"Error: app with package name {apk} not found in PlayStore.")
+        elif "DF-DFERH-" in error:
+            print(f"Error: app with package name {apk} not downloaded.")
+        print(error)
+    except e:
+        print("exception")
 
-    c = int(os.popen(f"adb shell pm list packages | grep {apk} | wc -l").read())
-    if c<1:
-    	print(f"ERROR: App '{apk}' doesn't download!")
-    else:
-    	time.sleep(2)
-    	print('Start traversing')
+def play(line):
+    apk = line.strip()
 
-    os.system(f"python3 traversing.py -p {apk} -d {serialnum} -e BFS -c 1 -s 2 -a 5 -G 1 -t 20 -w 0 -fl frida-scripts/sslunpinning.js -fl frida-scripts/functionharvester.js")
+    os.system("rm -rf ./execution_wrapper/APPS/*")
+    os.system(f"cp -r {saved_apps_dir}/apps/content/apps/{apk} execution_wrapper/APPS/{apk}")
 
+    process = subprocess.run(["python3", "main.py", "-p", "APPS", "-m", "auto", "-r", "1"], cwd="execution_wrapper")
 
     inpt = input("Press a button to continue...")
 
@@ -94,11 +102,14 @@ def func(line):
 
     print("\n\nData Safety Section Results:\n")
     print("############################")
-    os.system(f"python3 dss_descripancies.py {apk}")
+    os.system(f"python3 dss_discrepancies.py {apk}")
     print("############################")
 
 
 with open(lst_name) as f:
     for line in f:
-        func(line)
+        download(line)
 
+with open(lst_name) as f:
+    for line in f:
+        play(line)

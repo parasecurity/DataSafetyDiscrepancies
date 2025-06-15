@@ -1,0 +1,181 @@
+com.canva.editor
+############################
+Collected Discrepancies: {}
+Shared Discrepancies: {'Device or other IDs'}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+com.pinterest
+############################
+Collected Discrepancies: {}
+Shared Discrepancies: {}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+com.syc.librototal.El_Libro_Total
+############################
+Collected Discrepancies: {'Other app performance data', 'Diagnostics', 'App info and performance'}
+Shared Discrepancies: {'Device or other IDs'}
+Core Discrepancies: 50.00% 
+Third-Party Discrepancies: 50.00%
+############################
+
+
+com.booking
+############################
+Collected Discrepancies: {'Precise location', 'Location', 'Approximate location'}
+Shared Discrepancies: {'Precise location', 'Location', 'Approximate location'}
+Core Discrepancies: 100.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+com.duolingo
+############################
+Collected Discrepancies: {}
+Shared Discrepancies: {}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+com.netflix.mediaclient
+############################
+Collected Discrepancies: {'Other app performance data'}
+Shared Discrepancies: {'Name', 'Personal info'}
+Core Discrepancies: 75.00% 
+Third-Party Discrepancies: 25.00%
+############################
+
+
+com.nextcloud.client
+############################
+Collected Discrepancies: {'App info and performance', 'Device or other IDs', 'Personal info'}
+Shared Discrepancies: {'Device or other IDs'}
+Core Discrepancies: 28.57% 
+Third-Party Discrepancies: 71.43%
+############################
+
+
+com.owncloud.android
+############################
+Collected Discrepancies: {}
+Shared Discrepancies: {}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+com.simplemobiletools.calendar
+############################
+Collected Discrepancies: {'App activity', 'Personal info'}
+Shared Discrepancies: {}
+Core Discrepancies: 16.67% 
+Third-Party Discrepancies: 83.33%
+############################
+
+
+com.simplemobiletools.filemanager
+############################
+Collected Discrepancies: {'App activity', 'Personal info'}
+Shared Discrepancies: {}
+Core Discrepancies: 20.00% 
+Third-Party Discrepancies: 80.00%
+############################
+
+
+com.simplemobiletools.gallery
+############################
+Collected Discrepancies: {'Personal info', 'App activity'}
+Shared Discrepancies: {}
+Core Discrepancies: 14.29% 
+Third-Party Discrepancies: 85.71%
+############################
+
+
+com.spotify.music
+############################
+Collected Discrepancies: {}
+Shared Discrepancies: {'Name'}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+com.termux
+############################
+Collected Discrepancies: {}
+Shared Discrepancies: {'Device or other IDs', 'Personal info', 'Name'}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+net.osmand
+############################
+Collected Discrepancies: {}
+Shared Discrepancies: {}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+org.jitsi.meet
+############################
+Collected Discrepancies: {'Device or other IDs'}
+Shared Discrepancies: {}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 100.00%
+############################
+
+
+org.odk.collect.android
+############################
+Collected Discrepancies: {'Other app performance data'}
+Shared Discrepancies: {'Name', 'Personal info', 'Device or other IDs'}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 100.00%
+############################
+
+
+org.telegram.messenger
+############################
+Collected Discrepancies: {'App info and performance'}
+Shared Discrepancies: {'Personal info', 'Name', 'Device or other IDs'}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 100.00%
+############################
+
+
+org.thoughtcrime.securesms
+############################
+Collected Discrepancies: {'App info and performance'}
+Shared Discrepancies: {'Device or other IDs'}
+Core Discrepancies: 100.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+org.videolan.vlc
+############################
+Collected Discrepancies: {}
+Shared Discrepancies: {}
+Core Discrepancies: 0.00% 
+Third-Party Discrepancies: 0.00%
+############################
+
+
+org.wikipedia
+############################
+Collected Discrepancies: {'App info and performance', 'Personal info'}
+Shared Discrepancies: {'Device or other IDs'}
+Core Discrepancies: 50.00% 
+Third-Party Discrepancies: 50.00%
+############################
+
+
+15/20 (75%) of apps have at least ONE discrepancy

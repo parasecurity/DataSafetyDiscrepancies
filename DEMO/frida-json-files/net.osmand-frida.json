@@ -1,0 +1,70 @@
+[
+    {
+        "file": "logfile",
+        "results": [
+            {
+                "retval": "[object Object]",
+                "function": "android.app.ActivityManager.getRunningAppProcesses",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.app.ActivityManager.getRunningAppProcesses(Native Method)",
+                    "net.osmand.plus.activities.RestartActivity.isRestartProcess(RestartActivity.java:72)",
+                    "net.osmand.plus.OsmandApplication.onCreate(OsmandApplication.java:225)",
+                    "android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1277)",
+                    "android.app.ActivityThread.handleBindApplication(ActivityThread.java:6805)",
+                    "android.app.ActivityThread.handleBindApplication(Native Method)",
+                    "android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)",
+                    "android.app.ActivityThread$H.handleMessage(ActivityThread.java:2132)",
+                    "android.os.Handler.dispatchMessage(Handler.java:106)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.app.ActivityThread.main(ActivityThread.java:7918)",
+                    "java.lang.reflect.Method.invoke(Native Method)",
+                    "com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)",
+                    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)"
+                ]
+            },
+            {
+                "retval": "[StrictMode.VmPolicy; mask=1082130464]",
+                "function": "android.os.StrictMode.getVmPolicy",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.os.StrictMode.getVmPolicy(Native Method)",
+                    "com.google.android.gms.common.internal.zzp.zze(com.google.android.gms:play-services-basement@@18.3.0:1)",
+                    "com.google.android.gms.common.internal.zzs.zzc(com.google.android.gms:play-services-basement@@18.3.0:5)",
+                    "com.google.android.gms.common.internal.BaseGmsClient.zzp(com.google.android.gms:play-services-basement@@18.3.0:29)",
+                    "com.google.android.gms.common.internal.BaseGmsClient.connect(com.google.android.gms:play-services-basement@@18.3.0:2)",
+                    "com.google.android.gms.common.api.internal.zabq.zao(com.google.android.gms:play-services-base@@18.4.0:7)",
+                    "com.google.android.gms.common.api.internal.GoogleApiManager.zaG(com.google.android.gms:play-services-base@@18.4.0:7)",
+                    "com.google.android.gms.common.api.internal.GoogleApiManager.handleMessage(com.google.android.gms:play-services-base@@18.4.0:50)",
+                    "android.os.Handler.dispatchMessage(Handler.java:102)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.os.HandlerThread.run(HandlerThread.java:67)"
+                ]
+            },
+            {
+                "retval": "[StrictMode.ThreadPolicy; mask=1107296260]",
+                "function": "android.os.StrictMode.getThreadPolicy",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.os.StrictMode.getThreadPolicy(Native Method)",
+                    "android.app.ActivityThread.handleBindApplication(ActivityThread.java:6817)",
+                    "android.app.ActivityThread.handleBindApplication(Native Method)",
+                    "android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)",
+                    "android.app.ActivityThread$H.handleMessage(ActivityThread.java:2132)",
+                    "android.os.Handler.dispatchMessage(Handler.java:106)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.app.ActivityThread.main(ActivityThread.java:7918)",
+                    "java.lang.reflect.Method.invoke(Native Method)",
+                    "com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)",
+                    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)"
+                ]
+            }
+        ]
+    }
+]

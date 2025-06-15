@@ -1,0 +1,64 @@
+[
+    {
+        "file": "logfile",
+        "results": [
+            {
+                "retval": "[StrictMode.VmPolicy; mask=1082130464]",
+                "function": "android.os.StrictMode.getVmPolicy",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.os.StrictMode.getVmPolicy(Native Method)",
+                    "com.google.android.gms.common.internal.zzo.zze(Unknown Source:3)",
+                    "com.google.android.gms.common.internal.zzr.zzc(Unknown Source:26)",
+                    "com.google.android.gms.common.internal.BaseGmsClient.zzp(Unknown Source:290)",
+                    "com.google.android.gms.common.internal.BaseGmsClient.connect(Unknown Source:9)",
+                    "com.google.android.gms.common.api.internal.zabq.zao(Unknown Source:133)",
+                    "com.google.android.gms.common.api.internal.GoogleApiManager.zaI(Unknown Source:35)",
+                    "com.google.android.gms.common.api.internal.GoogleApiManager.handleMessage(Unknown Source:352)",
+                    "android.os.Handler.dispatchMessage(Handler.java:102)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.os.HandlerThread.run(HandlerThread.java:67)"
+                ]
+            },
+            {
+                "retval": "",
+                "function": "android.accounts.AccountManager.getAccountsByType",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.accounts.AccountManager.getAccountsByType(Native Method)",
+                    "org.telegram.messenger.ContactsController.lambda$checkAppAccount$4(Unknown Source:12)",
+                    "org.telegram.messenger.ContactsController.$r8$lambda$0WhfGDS_FWEVRisgKfPDCwquNkg(SourceFile:0)",
+                    "org.telegram.messenger.ContactsController$$ExternalSyntheticLambda48.run(SourceFile:0)",
+                    "android.os.Handler.handleCallback(Handler.java:942)",
+                    "android.os.Handler.dispatchMessage(Handler.java:99)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "org.telegram.messenger.DispatchQueue.run(Unknown Source:33)"
+                ]
+            },
+            {
+                "retval": "[StrictMode.ThreadPolicy; mask=1107296260]",
+                "function": "android.os.StrictMode.getThreadPolicy",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.os.StrictMode.getThreadPolicy(Native Method)",
+                    "android.app.ActivityThread.handleBindApplication(ActivityThread.java:6817)",
+                    "android.app.ActivityThread.handleBindApplication(Native Method)",
+                    "android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)",
+                    "android.app.ActivityThread$H.handleMessage(ActivityThread.java:2132)",
+                    "android.os.Handler.dispatchMessage(Handler.java:106)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.app.ActivityThread.main(ActivityThread.java:7918)",
+                    "java.lang.reflect.Method.invoke(Native Method)",
+                    "com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)",
+                    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)"
+                ]
+            }
+        ]
+    }
+]

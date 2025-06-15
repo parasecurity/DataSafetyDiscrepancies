@@ -1,0 +1,141 @@
+[
+    {
+        "file": "logfile",
+        "results": [
+            {
+                "retval": "[StrictMode.ThreadPolicy; mask=1107296260]",
+                "function": "android.os.StrictMode.getThreadPolicy",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.os.StrictMode.getThreadPolicy(Native Method)",
+                    "android.app.ActivityThread.handleBindApplication(ActivityThread.java:6817)",
+                    "android.app.ActivityThread.handleBindApplication(Native Method)",
+                    "android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)",
+                    "android.app.ActivityThread$H.handleMessage(ActivityThread.java:2132)",
+                    "android.os.Handler.dispatchMessage(Handler.java:106)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.app.ActivityThread.main(ActivityThread.java:7918)",
+                    "java.lang.reflect.Method.invoke(Native Method)",
+                    "com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)",
+                    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)"
+                ]
+            },
+            {
+                "retval": "null",
+                "function": "android.telephony.TelephonyManager.getLine1Number",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.telephony.TelephonyManager.getLine1Number(Native Method)",
+                    "android.telephony.TelephonyManager.getLine1Number(TelephonyManager.java:5032)",
+                    "android.telephony.TelephonyManager.getLine1Number(Native Method)",
+                    "org.thoughtcrime.securesms.util.Util.getDeviceNumber(Util.java:214)",
+                    "org.thoughtcrime.securesms.registration.ui.RegistrationViewModel.maybePrefillE164(RegistrationViewModel.kt:130)",
+                    "org.thoughtcrime.securesms.registration.ui.welcome.WelcomeFragment.onContinueClicked(WelcomeFragment.kt:66)",
+                    "org.thoughtcrime.securesms.registration.ui.welcome.WelcomeFragment.onViewCreated$lambda$1(WelcomeFragment.kt:57)",
+                    "org.thoughtcrime.securesms.registration.ui.welcome.WelcomeFragment.$r8$lambda$nhlIqxZe97dQfGZKstg2hIhj2w8(WelcomeFragment.kt:0)",
+                    "org.thoughtcrime.securesms.registration.ui.welcome.WelcomeFragment$$ExternalSyntheticLambda1.onClick(R8$$SyntheticClass:0)",
+                    "android.view.View.performClick(View.java:7542)",
+                    "com.google.android.material.button.MaterialButton.performClick(MaterialButton.java:1218)",
+                    "android.view.View.performClickInternal(View.java:7519)",
+                    "android.view.View.-$$Nest$mperformClickInternal(Unknown Source:0)",
+                    "android.view.View$PerformClick.run(View.java:29476)",
+                    "android.os.Handler.handleCallback(Handler.java:942)",
+                    "android.os.Handler.dispatchMessage(Handler.java:99)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.app.ActivityThread.main(ActivityThread.java:7918)",
+                    "java.lang.reflect.Method.invoke(Native Method)",
+                    "com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)",
+                    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)"
+                ]
+            },
+            {
+                "retval": "null",
+                "function": "android.telephony.TelephonyManager.getLine1Number",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.telephony.TelephonyManager.getLine1Number(Native Method)",
+                    "org.thoughtcrime.securesms.util.Util.getDeviceNumber(Util.java:214)",
+                    "org.thoughtcrime.securesms.registration.ui.RegistrationViewModel.maybePrefillE164(RegistrationViewModel.kt:130)",
+                    "org.thoughtcrime.securesms.registration.ui.welcome.WelcomeFragment.onContinueClicked(WelcomeFragment.kt:66)",
+                    "org.thoughtcrime.securesms.registration.ui.welcome.WelcomeFragment.onViewCreated$lambda$1(WelcomeFragment.kt:57)",
+                    "org.thoughtcrime.securesms.registration.ui.welcome.WelcomeFragment.$r8$lambda$nhlIqxZe97dQfGZKstg2hIhj2w8(WelcomeFragment.kt:0)",
+                    "org.thoughtcrime.securesms.registration.ui.welcome.WelcomeFragment$$ExternalSyntheticLambda1.onClick(R8$$SyntheticClass:0)",
+                    "android.view.View.performClick(View.java:7542)",
+                    "com.google.android.material.button.MaterialButton.performClick(MaterialButton.java:1218)",
+                    "android.view.View.performClickInternal(View.java:7519)",
+                    "android.view.View.-$$Nest$mperformClickInternal(Unknown Source:0)",
+                    "android.view.View$PerformClick.run(View.java:29476)",
+                    "android.os.Handler.handleCallback(Handler.java:942)",
+                    "android.os.Handler.dispatchMessage(Handler.java:99)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.app.ActivityThread.main(ActivityThread.java:7918)",
+                    "java.lang.reflect.Method.invoke(Native Method)",
+                    "com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)",
+                    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)"
+                ]
+            },
+            {
+                "retval": "gr",
+                "function": "android.telephony.TelephonyManager.getNetworkCountryIso",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.telephony.TelephonyManager.getNetworkCountryIso(Native Method)",
+                    "android.telephony.TelephonyManager.getNetworkCountryIso(TelephonyManager.java:2852)",
+                    "android.telephony.TelephonyManager.getNetworkCountryIso(Native Method)",
+                    "org.thoughtcrime.securesms.util.Util.getNetworkCountryIso(Util.java:233)",
+                    "org.thoughtcrime.securesms.registration.ui.phonenumber.EnterPhoneNumberViewModel.getDefaultCountryCode(EnterPhoneNumberViewModel.kt:61)",
+                    "org.thoughtcrime.securesms.registration.ui.phonenumber.EnterPhoneNumberFragment.onViewCreated(EnterPhoneNumberFragment.kt:207)",
+                    "androidx.fragment.app.Fragment.performViewCreated(Fragment.java:3152)",
+                    "androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:608)",
+                    "androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:286)",
+                    "androidx.fragment.app.FragmentManager.executeOpsTogether(FragmentManager.java:2214)",
+                    "androidx.fragment.app.FragmentManager.removeRedundantOperationsAndExecute(FragmentManager.java:2115)",
+                    "androidx.fragment.app.FragmentManager.execPendingActions(FragmentManager.java:2052)",
+                    "androidx.fragment.app.FragmentManager$5.run(FragmentManager.java:703)",
+                    "android.os.Handler.handleCallback(Handler.java:942)",
+                    "android.os.Handler.dispatchMessage(Handler.java:99)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.app.ActivityThread.main(ActivityThread.java:7918)",
+                    "java.lang.reflect.Method.invoke(Native Method)",
+                    "com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)",
+                    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)"
+                ]
+            },
+            {
+                "retval": "gr",
+                "function": "android.telephony.TelephonyManager.getNetworkCountryIso",
+                "stacktrace": [
+                    "dalvik.system.VMStack.getThreadStackTrace(Native Method)",
+                    "java.lang.Thread.getStackTrace(Thread.java:1841)",
+                    "android.telephony.TelephonyManager.getNetworkCountryIso(Native Method)",
+                    "org.thoughtcrime.securesms.util.Util.getNetworkCountryIso(Util.java:233)",
+                    "org.thoughtcrime.securesms.registration.ui.phonenumber.EnterPhoneNumberViewModel.getDefaultCountryCode(EnterPhoneNumberViewModel.kt:61)",
+                    "org.thoughtcrime.securesms.registration.ui.phonenumber.EnterPhoneNumberFragment.onViewCreated(EnterPhoneNumberFragment.kt:207)",
+                    "androidx.fragment.app.Fragment.performViewCreated(Fragment.java:3152)",
+                    "androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:608)",
+                    "androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:286)",
+                    "androidx.fragment.app.FragmentManager.executeOpsTogether(FragmentManager.java:2214)",
+                    "androidx.fragment.app.FragmentManager.removeRedundantOperationsAndExecute(FragmentManager.java:2115)",
+                    "androidx.fragment.app.FragmentManager.execPendingActions(FragmentManager.java:2052)",
+                    "androidx.fragment.app.FragmentManager$5.run(FragmentManager.java:703)",
+                    "android.os.Handler.handleCallback(Handler.java:942)",
+                    "android.os.Handler.dispatchMessage(Handler.java:99)",
+                    "android.os.Looper.loopOnce(Looper.java:201)",
+                    "android.os.Looper.loop(Looper.java:288)",
+                    "android.app.ActivityThread.main(ActivityThread.java:7918)",
+                    "java.lang.reflect.Method.invoke(Native Method)",
+                    "com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)",
+                    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)"
+                ]
+            }
+        ]
+    }
+]
