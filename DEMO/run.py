@@ -96,7 +96,7 @@ def play(line):
     os.system("rm -rf ./execution_wrapper/APPS/*")
     os.system(f"cp -r {saved_apps_dir}/apps/content/apps/{apk} execution_wrapper/APPS/{apk}")
 
-    # process = subprocess.run(["python3", "main.py", "-p", "APPS", "-m", "auto", "-r", "1"], cwd="execution_wrapper")
+    process = subprocess.run(["python3", "main.py", "-p", "APPS", "-m", "auto", "-r", "1"], cwd="execution_wrapper")
 
     inpt = input("Press a button to continue...")
 
