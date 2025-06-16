@@ -87,7 +87,7 @@ def main(directory, output_file):
 
 if __name__ == "__main__":
     apk = sys.argv[1]
-    DIRECTORY = f'/home/arkalos/Documents/PARASECURITY/DataSafetyDiscrepancies/DEMO/results/{apk}/frida'  # Update to your directory path
+    DIRECTORY = f'./results/{apk}/frida'  # Update to your directory path
     OUTPUT_FILE = f'./frida-json-files/{apk}-frida.json'
     
     main(DIRECTORY, OUTPUT_FILE)
