@@ -14,6 +14,7 @@ labels and the Applications' run-time behaviour.
 * OpenSSL 1.1.1f
 * Raccoon 4.24.0
 * DummyDroid  3.0
+* scrcpy
 
 ### Set Up
 
