@@ -175,19 +175,28 @@ labels and the Applications' run-time behaviour.
   * Notes:
       - The apks are downloaded inside ./apps/content/apps/
       - Multiple apks may exists inside each packagename folder. Install each Android application using adb install-multiple *.apk
+  <!-- -->
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+*run.py*
+  - Change 'saved_apps_dir' value to <your_folder\>
+
+*parse_burp-logs.py*
+  - Change 'keywords' dictionary values/locations/ids to your values/locations/ids 
+
+```sh
 python3 run.py --list <LIST_OF_APPS> --country <COUNTRY_CODE>
+```
 
 When the traversing is done, save the 'HTTP History' from burp to ./burp_logs and name it as <package_name>.json
   1. Ctrl+A
   2. Right Click
   3. Save items
-  4. Save as ./burp_logs/<package_name>.json
+  4. Save as ./burp_logs/<package_name\>.json
 
 Example:
 ```sh
 python3 run.py --list apps --country gr
 ```
-
