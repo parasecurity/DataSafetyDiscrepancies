@@ -1,12 +1,2 @@
 {
-    "com.imdb.mobile": {
-        "attempts": [
-            {
-                "start_timestamp": "2025-06-16 11:37:00",
-                "end_timestamp": "2025-06-16 11:42:43",
-                "status": true
-            }
-        ],
-        "status": true
-    }
 }

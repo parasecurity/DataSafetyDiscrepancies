@@ -180,6 +180,12 @@ labels and the Applications' run-time behaviour.
 
 python3 run.py --list <LIST_OF_APPS> --country <COUNTRY_CODE>
 
+When the traversing is done, save the 'HTTP History' from burp to ./burp_logs and name it as <package_name>.json
+  1. Ctrl+A
+  2. Right Click
+  3. Save items
+  4. Save as ./burp_logs/<package_name>.json
+
 Example:
 ```sh
 python3 run.py --list apps --country gr

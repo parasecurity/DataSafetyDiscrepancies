@@ -98,7 +98,7 @@ def play(line):
 
     process = subprocess.run(["python3", "main.py", "-p", "APPS", "-m", "auto", "-r", "1"], cwd="execution_wrapper")
 
-    inpt = input("Press a button to continue...")
+    inpt = input("Save burp 'HTTP History' and press a button to continue...")
 
     os.system(f"python3 parse_burp-logs.py {apk}")
 
