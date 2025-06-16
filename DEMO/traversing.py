@@ -1642,17 +1642,17 @@ def replay(replayPathList, ElementsList=None):
     for item in replayPathList:
         print(bcolors.OKGREEN + "|" + bcolors.ENDC, end=' ')
 
-        if skip_clicking==0:
-            powerOffOn()
+        # if skip_clicking==0:
+        #     powerOffOn()
 
-            ElementsList=readLogfile(apk)
+        #     ElementsList=readLogfile(apk)
 
-        elemExists = elementExists(ElementsList, item[2])
+        # elemExists = elementExists(ElementsList, item[2])
 
         #If it was a pop-up maybe
-        if not elemExists:
-            skip_clicking=1
-            continue
+        # if not elemExists:
+        #     skip_clicking=1
+        #     continue
 
         click(item[0],item[1],item[2])
         skip_clicking=0 #If something is clicked then in the next iteration get the new elements
@@ -2114,76 +2114,80 @@ def beginBFS(lst=[]):
             #Set the logcat date
             setLogcatDate()
 
-            if skip_clicking==0:
-                powerOffOn()
-                tmpElemList=readLogfile(apk)
+            tmpElemList = []
+            # if skip_clicking==0:
+            #     powerOffOn()
+            #     tmpElemList=readLogfile(apk)
 
-                timeStamp=time.time() - start_time - countSleepTime
-                ElementsList2=addTimestamptoElements(tmpElemList,timeStamp)
+            #     timeStamp=time.time() - start_time - countSleepTime
+            #     ElementsList2=addTimestamptoElements(tmpElemList,timeStamp)
                 
-                #Remove the extra one that was pressed
-                for item in ElementsList2:
-                    if item['isPressed']=="1" and item['ResourceId']==elemDict['ResourceId'] and item['Object getClass']==elemDict['Object getClass']:
-                        #Remove all the same occurances from the list
-                        ElementsList2= [a for a in ElementsList2 if a != item]
+            #     #Remove the extra one that was pressed
+            #     for item in ElementsList2:
+            #         if item['isPressed']=="1" and item['ResourceId']==elemDict['ResourceId'] and item['Object getClass']==elemDict['Object getClass']:
+            #             #Remove all the same occurances from the list
+            #             ElementsList2= [a for a in ElementsList2 if a != item]
                 
-                #Remove the ones that have been already found
-                for item in ElementsList2:
-                    if existsInQueue(item['Hash'])==1:
-                        #Remove all the same occurances from the list
-                        ElementsList2= [a for a in ElementsList2 if a != item]
+            #     #Remove the ones that have been already found
+            #     for item in ElementsList2:
+            #         if existsInQueue(item['Hash'])==1:
+            #             #Remove all the same occurances from the list
+            #             ElementsList2= [a for a in ElementsList2 if a != item]
                 
-                #Add the number of ***ONLY*** new UIelements to Elements-Yield feature
-                k = set(list([i['Hash'] for i in ElementsList2]))
-                elemDict['Elements-Yield']=len(k)
+            #     #Add the number of ***ONLY*** new UIelements to Elements-Yield feature
+            #     k = set(list([i['Hash'] for i in ElementsList2]))
+            #     elemDict['Elements-Yield']=len(k)
                 
-                #If click did not produce new elements the ElementsList is empty
-                if not ElementsList2:
-                    print(bcolors.WARNING + "ElementsList is empty." + bcolors.ENDC+ '.')
-                else:
-                    ViewCounter+=1
-                    addToQueue(ElementsList2,replayPath)
+            #     #If click did not produce new elements the ElementsList is empty
+            #     if not ElementsList2:
+            #         print(bcolors.WARNING + "ElementsList is empty." + bcolors.ENDC+ '.')
+            #     else:
+            #         ViewCounter+=1
+            #         addToQueue(ElementsList2,replayPath)
 
-            elemExists = elementExists(tmpElemList, elemDict)
+            # elemExists = elementExists(tmpElemList, elemDict)
 
-            #If it was a pop-up maybe
-            if not elemreplaypath and not elemExists:
-                print("Skip: ", elemDict["Text"])
-                skip_clicking=1
-                continue
+            # #If it was a pop-up maybe
+            # if not elemreplaypath and not elemExists:
+            #     print("Skip: ", elemDict["Text"])
+            #     skip_clicking=1
+            #     continue
 
             #Perform click
-            if not elemreplaypath or elemExists:#If the item does not have a replay path then click it
+            if not elemreplaypath: #or elemExists:#If the item does not have a replay path then click it
                     click(elemXcoord,elemYcoord,elemDict)
+
                     
             else:# If the item has a replay path. traverse the replay path first
-                flag=0
-                for item in elemreplaypath:
-                    elemExists = elementExists(ElementsList, item[2])
-                    #If any element exists
-                    if elemExists:
-                        replay(elemreplaypath, tmpElemList)
-                        flag=1
-                        break
-                if flag==0:
-                    tmp_i=0
-                    for tmp_item in BFSQueue:
-                        if tmp_item[3]==elemreplaypath:
-                            BFSQueue[tmp_i][3].clear()
-                        tmp_i+=1
+                # flag=0
+                # for item in elemreplaypath:
+                #     elemExists = elementExists(ElementsList, item[2])
+                #     #If any element exists
+                #     if elemExists:
+                #         replay(elemreplaypath, tmpElemList)
+                #         flag=1
+                #         break
+                # if flag==0:
+                #     tmp_i=0
+                #     for tmp_item in BFSQueue:
+                #         if tmp_item[3]==elemreplaypath:
+                #             BFSQueue[tmp_i][3].clear()
+                #         tmp_i+=1
 
-                elemExists = elementExists(tmpElemList, elemDict)
+                # elemExists = elementExists(tmpElemList, elemDict)
 
-                #If it was a pop-up maybe
-                if not elemExists:
-                    print("Skip: ", elemDict["Text"])
-                    skip_clicking==1
-                    continue
+                # #If it was a pop-up maybe
+                # if not elemExists:
+                #     print("Skip: ", elemDict["Text"])
+                #     skip_clicking==1
+                #     continue
 
+                #click(elemXcoord,elemYcoord,elemDict)
+                replay(elemreplaypath, tmpElemList)
                 click(elemXcoord,elemYcoord,elemDict)
-                
+
             skip_clicking=0
-            
+
             if (screenshots==1):
                 #Get screeshot
                 screenshot("view-"+str(screenshotCounter))
@@ -2392,75 +2396,78 @@ def beginDFS(lst=[]):
             setLogcatDate()
 
             
-            if skip_clicking==0:
-                powerOffOn()
-                tmpElemList=readLogfile(apk)
+            # if skip_clicking==0:
+            #     powerOffOn()
+            #     tmpElemList=readLogfile(apk)
 
-                timeStamp=time.time() - start_time - countSleepTime
-                ElementsList2=addTimestamptoElements(tmpElemList,timeStamp)
+            #     timeStamp=time.time() - start_time - countSleepTime
+            #     ElementsList2=addTimestamptoElements(tmpElemList,timeStamp)
                 
-                #Remove the extra one that was pressed
-                for item in ElementsList2:
-                    if item['isPressed']=="1" and item['ResourceId']==elemDict['ResourceId'] and item['Object getClass']==elemDict['Object getClass']:
-                        #Remove all the same occurances from the list
-                        ElementsList2= [a for a in ElementsList2 if a != item]
+            #     #Remove the extra one that was pressed
+            #     for item in ElementsList2:
+            #         if item['isPressed']=="1" and item['ResourceId']==elemDict['ResourceId'] and item['Object getClass']==elemDict['Object getClass']:
+            #             #Remove all the same occurances from the list
+            #             ElementsList2= [a for a in ElementsList2 if a != item]
                 
-                #Remove the ones that have been already found
-                for item in ElementsList2:
-                    if existsInQueue(item['Hash'])==1:
-                        #Remove all the same occurances from the list
-                        ElementsList2= [a for a in ElementsList2 if a != item]
+            #     #Remove the ones that have been already found
+            #     for item in ElementsList2:
+            #         if existsInQueue(item['Hash'])==1:
+            #             #Remove all the same occurances from the list
+            #             ElementsList2= [a for a in ElementsList2 if a != item]
                 
-                #Add the number of ***ONLY*** new UIelements to Elements-Yield feature
-                k = set(list([i['Hash'] for i in ElementsList2]))
-                elemDict['Elements-Yield']=len(k)
+            #     #Add the number of ***ONLY*** new UIelements to Elements-Yield feature
+            #     k = set(list([i['Hash'] for i in ElementsList2]))
+            #     elemDict['Elements-Yield']=len(k)
                 
-                #If click did not produce new elements the ElementsList is empty
-                if not ElementsList2:
-                    print(bcolors.WARNING + "ElementsList is empty." + bcolors.ENDC+ '.')
-                else:
-                    ViewCounter+=1
-                    addToQueue(ElementsList2,replayPath)
+            #     #If click did not produce new elements the ElementsList is empty
+            #     if not ElementsList2:
+            #         print(bcolors.WARNING + "ElementsList is empty." + bcolors.ENDC+ '.')
+            #     else:
+            #         ViewCounter+=1
+            #         addToQueue(ElementsList2,replayPath)
 
             
-            elemExists = elementExists(tmpElemList, elemDict)
+            # elemExists = elementExists(tmpElemList, elemDict)
 
-            #If it was a pop-up maybe
-            if not elemreplaypath and not elemExists:
-                print("Skip: ", elemDict["Text"])
-                skip_clicking=1
-                continue
+            # #If it was a pop-up maybe
+            # if not elemreplaypath and not elemExists:
+            #     print("Skip: ", elemDict["Text"])
+            #     skip_clicking=1
+            #     continue
 
             #Perform click
-            if not elemreplaypath or elemExists:#If the item does not have a replay path then click it
+            if not elemreplaypath: #or elemExists:#If the item does not have a replay path then click it
                     click(elemXcoord,elemYcoord,elemDict)
                     
             else:# If the item has a replay path. traverse the replay path first                
-                flag=0
-                for item in elemreplaypath:
-                    elemExists = elementExists(ElementsList, item[2])
-                    #If any element exists
-                    if elemExists:
-                        replay(elemreplaypath, tmpElemList)
-                        flag=1
-                        break
-                if flag==0:
-                    tmp_i=0
-                    for tmp_item in DFSQueue:
-                        if tmp_item[3]==elemreplaypath:
-                            DFSQueue[tmp_i][3].clear()
-                        tmp_i+=1
+                # flag=0
+                # for item in elemreplaypath:
+                #     elemExists = elementExists(ElementsList, item[2])
+                #     #If any element exists
+                #     if elemExists:
+                #         replay(elemreplaypath, tmpElemList)
+                #         flag=1
+                #         break
+                # if flag==0:
+                #     tmp_i=0
+                #     for tmp_item in DFSQueue:
+                #         if tmp_item[3]==elemreplaypath:
+                #             DFSQueue[tmp_i][3].clear()
+                #         tmp_i+=1
 
-                elemExists = elementExists(tmpElemList, elemDict)
+                # elemExists = elementExists(tmpElemList, elemDict)
 
-                #If it was a pop-up maybe
-                if not elemExists:
-                    print("Skip: ", elemDict["Text"])
-                    skip_clicking==1
-                    continue
+                # #If it was a pop-up maybe
+                # if not elemExists:
+                #     print("Skip: ", elemDict["Text"])
+                #     skip_clicking==1
+                #     continue
 
-                click(elemXcoord,elemYcoord,elemDict)
+                #click(elemXcoord,elemYcoord,elemDict)
                 
+                replay(elemreplaypath, tmpElemList)
+                click(elemXcoord,elemYcoord,elemDict)
+
             skip_clicking=0
 
             if (screenshots==1):

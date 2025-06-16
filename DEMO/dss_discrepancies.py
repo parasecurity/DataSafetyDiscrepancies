@@ -179,8 +179,6 @@ for item in shared:
 		final_shared.append(item)
 
 print("Collected Discrepancies:", "{}" if set(collected)-set(dss_collected) == set() else set(collected)-set(dss_collected))
-print("Shared Discrepancies:", "{}" if set(shared)-set(dss_shared) == set() else set(shared)-set(dss_shared))
-
 
 funcs = []
 for item in set(collected)-set(dss_collected):
@@ -188,9 +186,11 @@ for item in set(collected)-set(dss_collected):
 		if item in value and ("android." in key or "java." in key):
 			funcs.append(key)
 
-os.system(f"python3 parsefridaJan.py {apk}")
-
-func_origin = os.popen(f"python3 origin_extractor.py {apk}").read()
+if funcs!=[]:
+	os.system(f"python3 parsefridaJan.py {apk}")
+	func_origin = os.popen(f"python3 origin_extractor.py {apk}").read()
+else:
+	func_origin = "\n"
 
 core_origin = 0
 third_party_origin = 0
@@ -212,4 +212,7 @@ if functions_counter==0:
 	core_origin=0
 	third_party_origin=0
 
-print("Core Discrepancies:",str(format(core_origin/functions_counter*100, ".2f"))+"%","\nThird-Party Discrepancies:", str(format(third_party_origin/functions_counter*100, ".2f")+"%"))
+print("   -Core Discrepancies:",str(format(core_origin/functions_counter*100, ".2f"))+"%","\n   -Third-Party Discrepancies:", str(format(third_party_origin/functions_counter*100, ".2f")+"%"))
+
+
+print("Shared Discrepancies:", "{}" if set(shared)-set(dss_shared) == set() else set(shared)-set(dss_shared))

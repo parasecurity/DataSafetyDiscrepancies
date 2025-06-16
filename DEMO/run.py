@@ -30,6 +30,8 @@ saved_apps_dir = "/home/arkalos/Documents/ANDROID/Android/GooglePlay_downloader/
 serialnum = "16091JEC203869"
 #############################
 
+os.system("scrcpy &")
+time.sleep(2)
 
 scraper = PlayStoreScraper()
 
@@ -94,7 +96,7 @@ def play(line):
     os.system("rm -rf ./execution_wrapper/APPS/*")
     os.system(f"cp -r {saved_apps_dir}/apps/content/apps/{apk} execution_wrapper/APPS/{apk}")
 
-    process = subprocess.run(["python3", "main.py", "-p", "APPS", "-m", "auto", "-r", "1"], cwd="execution_wrapper")
+    # process = subprocess.run(["python3", "main.py", "-p", "APPS", "-m", "auto", "-r", "1"], cwd="execution_wrapper")
 
     inpt = input("Press a button to continue...")
 
@@ -105,6 +107,14 @@ def play(line):
     os.system(f"python3 dss_discrepancies.py {apk}")
     print("############################")
 
+    pids = os.popen("ps -aux | grep scrcpy | awk '{print $2}'").read()
+
+    for pid in pids.split("\n")[:-1]:
+        os.system(f"kill -9 {pid}")
+        break
+
+    os.system("scrcpy &")
+    time.sleep(2)
 
 with open(lst_name) as f:
     for line in f:
@@ -113,3 +123,9 @@ with open(lst_name) as f:
 with open(lst_name) as f:
     for line in f:
         play(line)
+
+    pids = os.popen("ps -aux | grep scrcpy | awk '{print $2}'").read()
+
+    for pid in pids.split("\n")[:-1]:
+        os.system(f"kill -9 {pid}")
+        break
