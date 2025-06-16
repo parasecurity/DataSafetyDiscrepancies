@@ -182,6 +182,6 @@ python3 run.py --list <LIST_OF_APPS> --country <COUNTRY_CODE>
 
 Example:
 ```sh
-python3 run.py --list apps.txt --country gr
+python3 run.py --list apps --country gr
 ```
 
