@@ -33,6 +33,9 @@ serialnum = "16091JEC203869"
 os.system("scrcpy &")
 time.sleep(2)
 
+if not os.path.exists("./execution_wrapper/APPS/"):
+    os.system("mkdir ./execution_wrapper/APPS/")
+
 scraper = PlayStoreScraper()
 
 # os.system("adb shell 'su -c ./data/local/tmp/frida-server &' &")
@@ -79,6 +82,8 @@ def download(line):
     # time.sleep(2)
     # os.system("adb shell input tap 540 920")
 
+    os.system(f"rm -rf {saved_apps_dir}/apps/content/apps/{apk}")
+
     ######Download the app#########
     try:
         error=os.popen(f"java -Draccoon.homedir={saved_apps_dir} -Draccoon.home={saved_apps_dir}/apps/ -jar raccoon4.jar --gpa-download {apk}").read().replace("\n","")
@@ -94,8 +99,10 @@ def play(line):
     apk = line.strip()
 
     os.system("rm -rf ./execution_wrapper/APPS/*")
+    time.sleep(2)
     os.system(f"cp -r {saved_apps_dir}/apps/content/apps/{apk} execution_wrapper/APPS/{apk}")
-
+    time.sleep(2)
+    
     process = subprocess.run(["python3", "main.py", "-p", "APPS", "-m", "auto", "-r", "1"], cwd="execution_wrapper")
 
     inpt = input("Save burp 'HTTP History' and press a button to continue...")
@@ -112,9 +119,6 @@ def play(line):
     for pid in pids.split("\n")[:-1]:
         os.system(f"kill -9 {pid}")
         break
-
-    os.system("scrcpy &")
-    time.sleep(2)
 
 with open(lst_name) as f:
     for line in f:

@@ -105,8 +105,8 @@ mapping = {
 	"Birthday": ["Personal info", "Other info"],
 	"Gender": ["Personal info", "Other info"],
 	"Address": ["Personal info", "Other info", "Location", "Approximate location"],
-	"Bluetooth Address": ["Device or other IDs"],
-	"Android Serial Number": ["Device or other IDs"],
+	"Bluetooth_Address": ["Device or other IDs"],
+	"Android_Serial_Number": ["Device or other IDs"],
 	"SSID": ["Device or other IDs"],
 	"BSSID": ["Device or other IDs"],
 	"MACaddr": ["Device or other IDs"],
@@ -195,17 +195,20 @@ else:
 core_origin = 0
 third_party_origin = 0
 functions_counter = 0
+lst_third_parties = []
 
 for item in func_origin.split("\n")[:-1]:
 	func = item.split(";")[0]
 	if func in set(funcs):
 		functions_counter+=1
-		if item.split(";")[1].strip().replace("\n","") in apk or item.split(";")[1].strip().replace("\n","") == "Core-Origin":
+		tmp = item.split(";")[1].strip().replace("\n","").replace("com.","").replace(".com","")
+		if tmp in apk or tmp == "Core-Origin":
 			core_origin +=1
-			print(item)
+			# print(item)
 		else:
 			third_party_origin +=1
-			print(item)
+			# print(item)
+			lst_third_parties.append(item.split(";")[1].strip().replace("\n",""))
 
 if functions_counter==0:
 	functions_counter=1
@@ -213,6 +216,7 @@ if functions_counter==0:
 	third_party_origin=0
 
 print("   -Core Discrepancies:",str(format(core_origin/functions_counter*100, ".2f"))+"%","\n   -Third-Party Discrepancies:", str(format(third_party_origin/functions_counter*100, ".2f")+"%"))
-
+for item in set(lst_third_parties):
+	print(f"      * {item}")
 
 print("Shared Discrepancies:", "{}" if set(shared)-set(dss_shared) == set() else set(shared)-set(dss_shared))
